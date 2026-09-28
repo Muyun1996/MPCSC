@@ -1,0 +1,16 @@
+# @package _group_
+_target_: mbrl.models.GaussianGNN
+device: ${device}
+model_type: "gnn"
+num_layers: 2
+obs_dim: ???
+action_dim: ???
+in_size: ???
+out_size: ???
+ensemble_size: 7
+hid_size: 32
+deterministic: false
+propagation_method: fixed_model
+learn_logvar_bounds: false  # so far this works better
+activation_fn_cfg:
+  _target_: torch.nn.SiLU

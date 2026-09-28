@@ -1,0 +1,30 @@
+# @package _group_
+name: "pets"
+
+agent:
+  _target_: mbrl.planning.TrajectoryOptimizerAgent
+  _recursive_: false
+  action_lb: ???
+  action_ub: ???
+  planning_horizon: ${overrides.planning_horizon}
+  optimizer_cfg: ${action_optimizer}
+  replan_freq: 1
+  verbose: ${debug_mode}
+  keep_last_solution: false
+
+normalize: true
+use_symlog_normalizer: true
+normalize_double_precision: true
+target_is_delta: true
+initial_obs_steps: ${overrides.trial_length}
+reset_buffer_after_offline: true
+reset_last_few_layers_of_model: true
+reset_interval: 20000
+freeze_dynamic_network_parameters: false
+test_steps: ${overrides.trial_length}
+freq_train_model: ${overrides.freq_train_model}
+learned_rewards: ${overrides.learned_rewards}
+
+epistemic_reward_weight: ${overrides.epistemic_reward_weight}
+action_cost_reward_weight: ${overrides.action_cost_reward_weight}
+num_particles: 20
