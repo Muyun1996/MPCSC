@@ -1,8 +1,16 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![DOI](https://img.shields.io/badge/DOI-10.1063%2F5.0195208-blue.svg)](https://doi.org/10.1063/5.0195208)
 
 # MBRL-CNOC: Model-Based Control of Complex Networked Systems
+
+This is the official code repository for the paper:
+
+> **Model predictive complex system control from observational and interventional data**<br>
+> Muyun Mou, Yu Guo, Fanming Luo, Yang Yu, and Jiang Zhang<br>
+> *Chaos: An Interdisciplinary Journal of Nonlinear Science* 34, 093125 (2024)<br>
+> https://doi.org/10.1063/5.0195208
 
 This repository adapts [MBRL-Lib](https://github.com/facebookresearch/mbrl-lib)
 (Pineda et al., 2021) to **model-based control of complex networked systems**.
@@ -157,6 +165,24 @@ from saved experiment logs:
 ├── draw/                        # plotting scripts for the result figures
 ├── run_*_batch_experiments.py   # batch runners for the three systems
 └── tests/                       # unit tests
+```
+
+## Citation
+
+If you find this code useful in your research, please cite our paper:
+
+```BibTeX
+@Article{Mou2024MPCSC,
+  author  = {Muyun Mou and Yu Guo and Fanming Luo and Yang Yu and Jiang Zhang},
+  title   = {Model predictive complex system control from observational and interventional data},
+  journal = {Chaos: An Interdisciplinary Journal of Nonlinear Science},
+  year    = {2024},
+  volume  = {34},
+  number  = {9},
+  pages   = {093125},
+  doi     = {10.1063/5.0195208},
+  url     = {https://pubs.aip.org/aip/cha/article/34/9/093125/3313311},
+}
 ```
 
 ## Acknowledgements
